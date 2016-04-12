@@ -1,0 +1,14 @@
+# Mac
+.DS_Store
+
+# compiled files
+*.css
+*.css.map
+*.js
+*.html
+
+# npm
+node_modules/
+npm-debug.log
+
+.idea/
