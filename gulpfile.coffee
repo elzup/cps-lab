@@ -11,10 +11,10 @@ $ = require('gulp-load-plugins')()
 
 # NOTE: template -> jade, script -> coffee, script -> stylus のがいいかも?
 config =
-  templates:
+  jade:
     source: './src/jade'
-    watch: './src/jade/*.jade'
-    destination: './public/'
+    watch: 'src/jade/*.jade'
+    destination: './public'
     config:
       pretty: true
   scripts:
@@ -34,17 +34,16 @@ handleError = (err) ->
   gutil.beep()
   this.emit 'end'
 
-# tasks
-gulp.task 'template', ->
-#   console.log config.src.jade_files
-#   console.log config.src.jade_dir
+
+gulp.task 'jade', ->
   gulp
-    .src config.templates.watch
+    .src config.jade.watch
     .pipe $.jade(
-      config.templates.option
+      config.jade.option
     )
     .on 'error', handleError
-    .pipe gulp.dest config.templates.destination
+    .pipe gulp.dest config.jade.destination
+
 
 gulp.task 'script', ->
   gulp
@@ -70,7 +69,7 @@ gulp.task "style", ->
 gulp.task 'watch', ->
   gulp.watch config.scripts.watch, ['script']
   gulp.watch config.styles.watch, ['style']
-  gulp.watch config.styles.watch, ['template']
+  gulp.watch config.jade.watch, ['jade']
 
 #load
-gulp.task 'default', ["script", "style", "template"]
+gulp.task 'default', ["script", "style", "jade"]
