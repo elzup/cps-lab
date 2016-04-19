@@ -1,11 +1,17 @@
-- var title = "実空間コンピューティング研究室"
-doctype html
-html(lang='ja')
-  head
-    meta(charset='UTF-8')
-    title=title
-    meta(name='author', content='elzup')
-    meta(name='keywords', content='cps,tdu,岩井研')
-    meta(name='description', content='実空間コンピューティング研究室のプロモーションページ')
-    link(rel='stylesheet', href='/css/style.css', type='text/css', media='screen', charset='utf-8')
-  body
+extends _template/base
+
+block title
+  title 実空間コンピューティング研究室
+
+block content
+  include _parts/navbar
+  #wrapper
+    .container
+      h1 研究内容
+      .container-rows.row
+        .col-sm-6
+          p 本研究は, スマートフォンや環境センサによりユーザの生活を支援し、安心安全を保つ実世界環境の構築を目指しています。
+          p 経済的なコスト、使いやすさを考慮し、高信頼、省電力を実現したユーザ自身がコントロールできる持続可能なシステムの研究を行います。
+          p また人間や車のモビリティを利用した実世界計測のためのハードウエア，通信，ミドルウエア，アプリケーションの研究を行います。下記の「人間」「防災」「都市」のテーマを中心に研究を行います。
+        .col-sm-6
+          img(src="/img/cps-theme-simbol.svg")

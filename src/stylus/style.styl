@@ -1,270 +1,35 @@
-@import url('/components/components/normalize.css/normalize.css')
-
 html, body
   font-family "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro0"
 
-font-col-sub=#659BFC
-back-col-abstract=#33B9FF
-back-col-gallery=#8077AB
+li
+  list-style: none
 
-body
-  padding 0
-  margin 0
+#wrapper
+  padding: 0 20px
 
-*
-  word-wrap break-word
+.navbar
+  height 4em
+  padding 5px 30px
+  box-shadow 1px 0px 1px 1px black
 
-img
-  width 100%
 
-.ribbon
-  padding 7px
-  margin 10px 0 5px
-  border-top solid 1px black
-  border-bottom solid 1px black
-  font-size 1.5em
-  color font-col-sub
+.logo
+  float: left
+  height: 100%
+  img
+    height: 100%
 
-header
-  width 100%
-  background url(/img/eyecatch.jpg) no-repeat
-  background-size cover
-  height 420px
-  h1
-    margin 0px
-    color white
-    padding 30px
-    font-size 60px
-    line-height 1em
-
-theme(color)
-  margin 5px
-  h3
-    border 1px solid white
-    padding 0px 0px 0px 10px
-    font-size 12px
-    background color
-  ul
-    font-size 12px
-    margin 5px
-    margin-top 3px
-
-.row
+.menu
   display flex
-  width 100%
+  float: right
+  &__item
+    margin-left: 10px
 
-row-margin()
-  >*
-    margin 10px 10px
-
-// TODO: out overflow
-.col-half
-  width 50%
-  overflow hidden
-
-
-#abstract
-  background back-col-abstract
-  color white
-  .row.up
-    row-margin()
-    h2
-      padding 10px
-      width 40%
-      font-size 2em
-      line-height 1em
-    .subtext
-      padding 10px
-      width 60%
-  .row.down.themes
-    row-margin()
-    section
-      &.theme-1
-        theme(#CCD200)
-      &.theme-2
-        theme(#747474)
-      &.theme-3
-        theme(#15CA40)
-
-#gallery
-  background back-col-gallery
-  color white
-  .img-block
-    padding 10px
-    margin 10px !important
-    border 1px solid white
-    h3
-      font-size 20px
-      font-weight bold
-      line-height 1em
-      padding 5px
-    &.img-block-3
-      width 30%
-    &.img-block-4
-      width 25%
-    >img
-      height 140px
-      width 100%
-
-#days
-  margin-top 20px
-  padding 5px
-  .headline
-    padding-top 10px
-    position relative
-    h2.days-title
-      font-size 2em
-      margin 5px
-      line-height 1em
-      span
-        background font-col-sub
-        color white
-        padding 5px
-        margin 5px
-    >p
-      position absolute
-      bottom 0
-      color font-col-sub
-      margin-left 13px
-
-#profile
-  background #D4F8FF
-  margin 10px
-  padding 5px
-  .profile-main
-    margin 5px
-    width 60%
-    .name
-      font-weight bold
-      text-align center
-      margin 5px
-    .belong
-      text-align center
-      margin 5px
-  .sub-images
-    margin 5px
-    width 40%
-    img
-      width 100%
-
-
-#options
-  width 100%
-  #food
-    margin 5px
-    #menu
-      width 40%
-    p.help
-      width 60%
-      font-size 10px
-      padding 5px
-  #depart
-    background url(/img/note.jpg) no-repeat
-    background-size 100%
-    padding 81px 27px 168px 31px
-    p
-      color font-col-sub !important
-      font-size 23px
-      padding-bottom 10px
-    table
-      border-collapse separate
-      border-spacing 3px
-      width 100%
-      td
-        text-align left
-      td:nth-of-type(2)
-        text-align right
-
-#menu
-  border solid 5px white
-  background white
-  box-shadow 0 0 0 1px, 0 0 0 1px inset
-  position relative
-  top -50px
-  font-size 10px
-  h5
-    background #FFFCC7
+.container
+  h1
     text-align center
-    border-left solid 1px
-    border-top solid 1px
-    border-right solid 1px
-    padding 2px
-  table
-    margin 5px
-    width 90%
-
-hr
-  width 100%
-
-table.time
-  width 100%
-  font-size 10px
-  border solid 1px white
-  td
-    text-align center
-    background #B6FCFF
-    border solid 1px white
-    &.thd
-      background #DADADA !important
-      width 30%
-  th
-    text-align center
-    background #5ACDFF
-    color white
-    border solid 1px white
-
-.row.spot
-  >div:nth-of-type(1) 
-    width 40%
-  >div:nth-of-type(2) 
-    width 261px
-
-.spot
-  .img
-    width 40%
-    img
-      width 100%
-  .text
-    padding 5px
-    width 60%
-    h3
-      font-weight bold
-
-#room
-  border solid 1px font-col-sub
-  margin 10px
-  padding 0
-  .lists
-    width 50%
-    padding 10px
-    .row
-      .col
-        width 33%
-        ul
-          margin-left 5px
-        h5
-          color font-col-sub
-          margin 5px 0
-          span
-            background font-col-sub
-            color white
-            padding 1px 3px
-            margin-right 5px
-  .img
-    width 50%
-    img
-      width 100%
-
-
-
-.share 
-  text-align right
-  padding 0 20px
-
-.info
-  line-height 1.5em
-  text-align right
-  padding 0 20px
-  a
-    color black !important
-
+  img
+    width 100%
+  &-rows
+    > *
+      width 50%
